@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions (
         features = {"src/test/resources/featurefile"},
         glue = {"stepdefinationfile"},
-        tags = "@TS01"
+        tags = "DynamicDropDown"
 
 
 )

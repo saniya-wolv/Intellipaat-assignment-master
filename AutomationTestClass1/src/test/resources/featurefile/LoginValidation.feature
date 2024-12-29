@@ -7,7 +7,7 @@ Feature: Validating the login feature of an salesforce application
     And user clicks the login button
     Then Validating the error message
 
-    @TS02 @SmokeTest @RegressionTest @TestOne@TestTWO
+    @TS02 @SmokeTest @RegressionTest
   Scenario: User validate the login functionality
     Given User launch the browser and nagivates to the URL
     When User enters the username "Saniya2"  and password "San@123"

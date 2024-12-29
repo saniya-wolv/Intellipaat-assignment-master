@@ -12,14 +12,17 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AutomationMappingSteps {
     WebDriver driver;
-    WebElement currencyElement;
+    WebElement currencyElement , toDropdownEle;
+
     @Given("User launch the browser and nagivates to the URL")
     public void launchBrowser(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
        // driver.get("https://www.lambdatest.com/selenium-playground/select-dropdown-demo");
 
-      driver.get("https://login.salesforce.com/");
+//      driver.get("https://login.salesforce.com/");
+
+        driver.get("https://www.makemytrip.com/flights/");
     }
 
     @When("User enters the username {string}  and password {string}")
@@ -84,5 +87,13 @@ public class AutomationMappingSteps {
          String value =   currencyElement.findElements(By.tagName("option")).get(i).getText();
             System.out.println(value);
         }
+    }
+
+    @When("User handles the dynamic dropdown")
+    public void handlingDynamicDropdown() {
+
+       // driver.findElement(By.id("fromCity")).click();
+      //  driver.findElement(By.id("react-autowhatever-1-section-1-item-7")).click();
+
     }
 }
